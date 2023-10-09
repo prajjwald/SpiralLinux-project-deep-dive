@@ -1,0 +1,3 @@
+[Added Associations]
+inode/directory=pcmanfm.desktop;pcmanfm-qt.desktop;
+application/vnd.debian.binary-package=gdebi.desktop;

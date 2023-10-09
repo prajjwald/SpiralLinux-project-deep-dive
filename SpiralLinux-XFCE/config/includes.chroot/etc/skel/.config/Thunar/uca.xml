@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open terminal here</name>
+	<unique-id>1376925988838423-2</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Open a terminal emulator window</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>system-search</icon>
+	<name>Search...</name>
+	<unique-id>1376145324304167-1</unique-id>
+	<command>catfish %f</command>
+	<description>Search files and directories</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>system-lock-screen</icon>
+	<name>Browse as root</name>
+	<unique-id>1652591071153681-1</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Open directory with admin privileges</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>edit-flag</icon>
+	<name>Edit as root</name>
+	<unique-id>1652591349704872-2</unique-id>
+	<command>pkexec mousepad %F</command>
+	<description>Edit text file with admin privileges</description>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+</actions>
+

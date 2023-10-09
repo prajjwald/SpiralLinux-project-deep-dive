@@ -1,0 +1,11 @@
+# This used to be set to `gtk2`, now using `kvantum` to avoid skinny Qt scrollbars with Yaru
+QT_STYLE_OVERRIDE=kvantum
+
+# Native GTK file dialogs in Qt apps
+QT_QPA_PLATFORMTHEME=gtk2
+
+#Disable stupid disappearing overlay scrollbars that cover last line in windows
+GTK_OVERLAY_SCROLLING=0
+
+#For smooth scrolling in Firefox with touchpad
+MOZ_USE_XINPUT2=1

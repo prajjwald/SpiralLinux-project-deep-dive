@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/usr/bin/trust-desktop-icons.sh
+Name=Trust Desktop icons
+OnlyShowIn=XFCE;
+Type=Application
+Version=1.0
+Name[en_US]=trust-desktop-icons.desktop

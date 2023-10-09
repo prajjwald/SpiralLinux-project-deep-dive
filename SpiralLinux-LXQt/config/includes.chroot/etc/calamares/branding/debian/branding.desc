@@ -1,0 +1,37 @@
+---
+componentName:   debian
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         SpiralLinux LXQt
+    shortProductName:    SpiralLinux
+    version:             12.231005
+    shortVersion:        12
+    versionedName:       SpiralLinux 12.231005 LXQt
+    shortVersionedName:  SpiralLinux 12 LXQt
+    bootloaderEntryName: Debian (SpiralLinux LXQt)
+    productUrl:          https://spirallinux.github.io
+    supportUrl:          https://github.com/SpiralLinux/SpiralLinux-project/discussions
+    knownIssuesUrl:      https://github.com/SpiralLinux/SpiralLinux-project/issues
+    releaseNotesUrl:     https://github.com/SpiralLinux/SpiralLinux-project/releases
+    donateUrl:           https://spirallinux.github.io
+
+images:
+    productLogo:         "SpiralLinux-logo.png"
+    productIcon:         "SpiralLinux-logo.png"
+    productWelcome:      "welcome.png"
+    # productWallpaper:  "wallpaper.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#2c3133"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#4d7079"
+   sidebarTextSelect:    "#292F34"
+
+slideshowAPI: 2

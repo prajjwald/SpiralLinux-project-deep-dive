@@ -1,0 +1,8 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Daemon]
+Timeout=60
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/usr/share/wallpapers/Zwopper-Green-Dew-CC-BY-SA-30-2560x1600.png

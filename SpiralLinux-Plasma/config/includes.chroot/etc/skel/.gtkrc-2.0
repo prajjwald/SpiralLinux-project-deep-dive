@@ -1,0 +1,21 @@
+gtk-theme-name="Numix"
+gtk-enable-animations=1
+gtk-primary-button-warps-slider=1
+gtk-toolbar-style=3
+gtk-menu-images=1
+gtk-button-images=1
+gtk-cursor-theme-size=24
+gtk-cursor-theme-name="breeze_cursors"
+gtk-icon-theme-name="breeze"
+gtk-font-name="Ubuntu,  11"
+
+
+style "myscrollbar"
+{
+  GtkScrollbar::stepper-size = 16
+  GtkScrollbar::has-backward-stepper = 1
+  GtkScrollbar::has-secondary-backward-stepper = 1
+  GtkScrollbar::has-forward-stepper  = 1
+}
+
+class "GtkScrollbar" style "myscrollbar"

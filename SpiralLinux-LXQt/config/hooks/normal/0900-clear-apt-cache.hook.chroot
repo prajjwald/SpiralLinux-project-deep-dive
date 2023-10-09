@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "I: running $0"
+
+# Clear APT package list cache to reduce the image size
+find /var/cache/apt -type f -delete

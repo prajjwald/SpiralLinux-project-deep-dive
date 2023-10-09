@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Snapper GUI (root)
+Comment=Admin Snapper settings as root
+Exec=pkexec snapper-gui
+Icon=drive-harddisk
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utilities;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Disable Discover Notifier applet
+Exec=/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier -x
+Icon=system-software-update
+Type=Application
+NoDisplay=true
+OnlyShowIn=KDE

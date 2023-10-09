@@ -1,0 +1,6 @@
+[org.gnome.desktop.background:Budgie]
+picture-uri = 'file:///usr/share/wallpapers/Zwopper-Green-Dew-CC-BY-SA-30-2560x1600.png'
+
+[org.gnome.desktop.screensaver:Budgie]
+picture-uri = 'file:///usr/share/wallpapers/Zwopper-Green-Dew-CC-BY-SA-30-2560x1600.png'
+lock-delay = 3600

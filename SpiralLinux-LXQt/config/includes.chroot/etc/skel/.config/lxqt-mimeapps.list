@@ -1,0 +1,8 @@
+[Default Applications]
+inode/directory=pcmanfm-qt.desktop
+image/png=lximage-qt.desktop
+image/jpeg=lximage-qt.desktop
+text/plain=org.xfce.mousepad.desktop
+application/pdf=org.gnome.Evince.desktop
+text/css=org.xfce.mousepad.desktop
+application/vnd.debian.binary-package=gdebi.desktop

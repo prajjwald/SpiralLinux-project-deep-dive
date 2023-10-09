@@ -1,0 +1,11 @@
+# For integration of Qt app theming with selected GTK theme, don't use in Plasma
+QT_STYLE_OVERRIDE=gtk2
+
+# Native GTK file dialogs in Qt apps
+QT_QPA_PLATFORMTHEME=gtk2
+
+#Disable stupid disappearing overlay scrollbars that cover last line in windows
+GTK_OVERLAY_SCROLLING=0
+
+#For smooth scrolling in Firefox with touchpad
+MOZ_USE_XINPUT2=1

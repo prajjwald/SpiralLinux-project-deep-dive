@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Action
+Name=Open as root
+Icon=emblem-danger
+Profiles=Edit;Open;
+
+[X-Action-Profile Edit]
+MimeTypes=text/plain;
+Exec=lxsudo mousepad %f
+
+[X-Action-Profile Open]
+MimeTypes=inode/directory;
+Exec=lxsudo pcmanfm-qt %u

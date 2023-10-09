@@ -1,0 +1,21 @@
+@startwbs
+
+* <:palm_tree:> SpiralLinux-Plasma
+** <:palm_tree:> config
+*** <:palm_tree:> includes.chroot
+*** <:palm_tree:> bootloaders
+*** <:palm_tree:> packages
+*** <:palm_tree:> package-lists
+*** <:palm_tree:> hooks
+*** <:palm_tree:> archives
+*** <:palm_tree:> preseed
+** <:four_leaf_clover:> spiral
+** <:palm_tree:> auto
+*** <:four_leaf_clover:> hdd
+*** <:four_leaf_clover:> clean
+*** <:four_leaf_clover:> iso
+*** <:four_leaf_clover:> build
+** <:four_leaf_clover:> live-build_memtest.patch
+** <:four_leaf_clover:> firmwarelists.sh
+
+@endwbs

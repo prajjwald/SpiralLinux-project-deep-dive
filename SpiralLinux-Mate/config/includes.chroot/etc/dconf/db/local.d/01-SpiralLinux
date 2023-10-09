@@ -1,0 +1,5 @@
+[org/mate/desktop/lockdown]
+disable-lock-screen=false
+
+[org/gnome/desktop/interface]
+overlay-scrolling=false

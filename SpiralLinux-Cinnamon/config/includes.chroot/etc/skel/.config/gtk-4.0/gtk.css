@@ -1,0 +1,9 @@
+@define-color accent_color #c34113;
+@define-color accent_bg_color #c34113;
+
+scrollbar slider {
+    border-radius: 1px;
+    border: 1px solid transparent;
+    min-width: 12px;
+    min-height: 12px;
+}

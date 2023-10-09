@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Nemo Desktop
+Description=Nemo desktop icons
+Exec=/usr/bin/nemo-desktop

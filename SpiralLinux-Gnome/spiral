@@ -1,0 +1,37 @@
+#!/bin/bash
+
+NAME="SpiralLinux_Gnome_12.231005"
+
+###########################################################
+
+while getopts "di" option; do
+   case $option in
+      d) # HDD image
+            cp ./auto/hdd ./auto/config
+            cp firmwarelists.sh /usr/share/live/build/functions/firmwarelists.sh ## Patched version for https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018873
+            if [ ! -f ./live-build_memtest_patch_applied ]
+	     then
+		patch -f -d/ -p0 < live-build_memtest.patch ## Many thanks for this patch from https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1025795#10
+            	touch ./live-build_memtest_patch_applied
+	    fi
+            lb clean
+            lb config
+            lb build;;
+      i) # ISO image
+            cp ./auto/iso ./auto/config
+            cp firmwarelists.sh /usr/share/live/build/functions/firmwarelists.sh ## Patched version for https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018873
+            if [ ! -f ./live-build_memtest_patch_applied ]
+	     then
+		patch -f -d/ -p0 < live-build_memtest.patch ## Many thanks for this patch from https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1025795#10
+            	touch ./live-build_memtest_patch_applied
+	    fi
+            lb clean
+            lb config
+            lb build
+            mv live-image-amd64.packages ${NAME}_x86-64.packages
+            mv live-image-amd64.hybrid.iso ${NAME}_x86-64.iso;;
+     \?) # Invalid option
+         echo "Error: Invalid option"
+         exit;;
+   esac
+done

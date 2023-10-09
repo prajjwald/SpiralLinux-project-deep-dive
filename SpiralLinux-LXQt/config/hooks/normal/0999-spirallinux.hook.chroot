@@ -1,0 +1,59 @@
+#!/bin/bash
+
+### Show the user list in LightDM
+sed -i 's|#greeter-hide-users=false|greeter-hide-users=false|g' /etc/lightdm/lightdm.conf
+
+### Install Flatpak packages and allow access to user configs for decent GTK and Qt theme support
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install -y --noninteractive --system runtime/org.kde.KStyle.Kvantum/x86_64/5.15-22.08
+flatpak override --env=QT_STYLE_OVERRIDE=kvantum
+flatpak override --filesystem=xdg-config/Kvantum:ro
+flatpak install -y --noninteractive --system runtime/org.kde.PlatformTheme.QGnomePlatform/x86_64/5.15-22.08
+flatpak override --env=QT_QPA_PLATFORMTHEME=gnome
+flatpak install -y --noninteractive --system org.gtk.Gtk3theme.Numix
+flatpak override --filesystem=xdg-config/gtk-3.0:ro
+flatpak override --filesystem=xdg-config/gtk-4.0:ro
+flatpak override --filesystem=xdg-config/fontconfig:ro
+
+### Don't automatically switch Bluetooth devices to HSP/HFP, use A2DP by default
+#sed -i 's|load-module module-bluetooth-policy|load-module module-bluetooth-policy auto_switch=false|g' /etc/pulse/default.pa
+
+### Automatically switch PulseAudio default audio output to newly connected Bluetooth devices
+#printf "\n####SpiralLinux tweak:####\nload-module module-switch-on-connect" >> /etc/pulse/default.pa
+
+### Install https://github.com/Antynea/grub-btrfs
+cd /usr/share/grub-btrfs
+make install
+rm -R /usr/share/grub-btrfs
+systemctl enable grub-btrfsd
+
+### GRUB 2.06 menu generation doesn't run `os-prober` without this:
+printf "\nGRUB_DISABLE_OS_PROBER=false\n" >> /etc/default/grub
+
+### Make pkexec apps use the correct theme
+cp -R /etc/skel/.config /root/
+cp -R /etc/skel/.config/pcmanfm-qt /root/.config/
+cp -R /etc/skel/.config/lxqt-mimeapps.list /root/.config/
+cp -R /etc/skel/.config/mimeapps.list /root/.config/
+cp -R /etc/skel/.local /root/
+cp /etc/skel/.gtkrc-2.0 /root/
+
+### Change "Install Debian" desktop file
+sed -i 's|Install Debian|Install SpiralLinux|g' /usr/share/applications/install-debian.desktop
+sed -i 's|Debian Live|SpiralLinux|g' /usr/share/applications/install-debian.desktop
+
+### Disable Gnome Software automatic updates
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+
+### Reconfigure LightDM to allow booting into read-only snapshots, many thanks to https://www.kali.org/docs/installation/btrfs/
+sudo sed -i 's/^#user-authority-in-system-dir=false/user-authority-in-system-dir=true/' /etc/lightdm/lightdm.conf
+
+### Enable Pipewire and configure for low latency
+systemctl --global enable pipewire.socket
+systemctl --global enable wireplumber.service
+## https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Config-JACK#installation ##
+ln -s /usr/share/doc/pipewire/examples/ld.so.conf.d/pipewire-jack-x86_64-linux-gnu.conf /etc/ld.so.conf.d/
+ldconfig
+
+### Only 1 locale config, Bookworm still uses /etc/default/locale -- https://groups.google.com/g/linux.debian.bugs.dist/c/6TOOs1L3z3E
+ln -s /etc/default/locale /etc/locale.conf

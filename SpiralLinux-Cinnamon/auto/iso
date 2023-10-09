@@ -1,0 +1,34 @@
+#!/bin/sh
+# live-build configuration script
+# see 'man lb config'
+
+lb config noauto \
+--apt-recommends false \
+--apt-source-archives false \
+--apt-indices false \
+--architectures amd64 \
+--archive-areas 'main contrib non-free non-free-firmware' \
+--backports true \
+--security true \
+--updates true \
+--source false \
+--binary-filesystem ext4 \
+--chroot-squashfs-compression-type zstd \
+--binary-images iso-hybrid \
+--checksums sha256 \
+--clean \
+--debconf-frontend noninteractive \
+--debian-installer none \
+--debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
+--distribution bookworm \
+--firmware-binary true \
+--firmware-chroot true \
+--initramfs live-boot \
+--iso-publisher SpiralLinux \
+--iso-volume SpiralLinux_Cinnamon \
+--linux-packages "linux-image linux-headers" \
+--bootappend-live "boot=live config quiet loglevel=0 splash threadirqs" \
+--memtest memtest86+x64 \
+--win32-loader false
+
+"${@}"

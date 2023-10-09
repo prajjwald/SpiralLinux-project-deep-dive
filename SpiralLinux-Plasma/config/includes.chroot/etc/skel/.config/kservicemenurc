@@ -1,0 +1,14 @@
+[Show]
+EditInKate=true
+OpenAsRootKDE5=true
+compressfileitemaction=true
+extractfileitemaction=true
+gdrivecontextmenuaction=true
+installFont=true
+kactivitymanagerd_fileitem_linking_plugin=true
+kdeconnectfileitemaction=true
+mountisoaction=true
+openTerminalHere=true
+runInKonsole=true
+sharefileitemaction=true
+slideshow=true

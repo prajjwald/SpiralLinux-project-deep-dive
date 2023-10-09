@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Writes the final sources.list file
+#
+
+##CHROOT=$(mount | grep proc | grep calamares | awk '{print $3}' | sed -e "s#/proc##g")
+##RELEASE="bookworm"
+
+##cat << EOF > $CHROOT/etc/apt/sources.list
+# See https://wiki.debian.org/SourcesList for more information.
+
+##deb https://deb.debian.org/debian/ $RELEASE main contrib non-free non-free-firmware
+#deb-src https://deb.debian.org/debian/ $RELEASE main contrib non-free non-free-firmware
+
+##deb http://security.debian.org/ $RELEASE-security main contrib non-free non-free-firmware
+#deb-src http://security.debian.org/ $RELEASE-security main contrib non-free non-free-firmware
+
+##deb https://deb.debian.org/debian/ $RELEASE-updates main contrib non-free non-free-firmware
+#deb-src https://deb.debian.org/debian/ $RELEASE-updates main contrib non-free non-free-firmware
+
+##deb https://deb.debian.org/debian/ $RELEASE-backports main contrib non-free non-free-firmware
+#deb-src https://deb.debian.org/debian/ $RELEASE-backports main contrib non-free non-free-firmware
+##EOF
+
+##exit 0
+
+

@@ -1,0 +1,20 @@
+#pulseaudio-button * {
+
+-gtk-icon-transform: scale(.8);
+
+}
+
+#xfce4-power-manager-plugin * {
+
+-gtk-icon-transform: scale(.8);
+
+}
+
+scrollbar, scrollbar button, scrollbar slider {
+	-GtkScrollbar-has-backward-stepper: true;
+	-GtkScrollbar-has-secondary-backward-stepper: true;
+	-GtkScrollbar-has-forward-stepper: true;
+	min-width: 12px;
+	min-height: 12px;
+	border-radius: 0;
+}

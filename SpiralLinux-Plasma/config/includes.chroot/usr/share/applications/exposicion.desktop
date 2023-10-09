@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Visual window and workspace manager
+Comment=Visual window and workspace manager
+Exec=qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut ShowDesktopGrid
+GenericName[en_US]=Visual window and workspace manager
+GenericName=Visual window and workspace manager
+Icon=preferences-desktop-virtual
+InitialPreference=5
+MimeType=
+Name[en_US]=Exposición
+Name=Exposè
+Path=
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+NoDisplay=true

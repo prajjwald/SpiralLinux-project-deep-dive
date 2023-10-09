@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+# Copyright 2023 Pascal Jaeger
+# Distributed under the terms of the GNU General Public License v3
+
+name="grub-btrfs daemon"
+command="/usr/bin/grub-btrfsd"
+command_args="$optional_args ${snapshots}"
+pidfile="/run/{RC_SVCNAME}.pid"
+command_background=true
+
+depend() {
+   use localmount
+}

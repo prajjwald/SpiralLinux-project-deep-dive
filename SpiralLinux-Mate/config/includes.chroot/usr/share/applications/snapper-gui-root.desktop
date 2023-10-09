@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Snapper GUI (root)
+Comment=Admin Snapper settings as root
+Exec=sh -c "pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY snapper-gui"
+Icon=drive-harddisk
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utilities;

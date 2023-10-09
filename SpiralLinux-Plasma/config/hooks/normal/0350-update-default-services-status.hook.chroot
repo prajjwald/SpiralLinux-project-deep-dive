@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "I: running $0"
+
+##disabled_services="avahi-daemon.service openvpn.service rsync.service ssh.service nmbd.service smbd.service libvirtd.service libvirt-guests.service"
+##enabled_services="bumblebeed.service cups-browsed.service bluetooth.service cups.service fancontrol.service laptop-mode.service ntp.service plymouth.service preload.service smartmontools.service rsyslog.service lm-sensors.service hddtemp.service haveged.service"
+
+disabled_services="openvpn.service rsync.service smbd.service"
+enabled_services="earlyoom.service nmbd.service avahi-daemon.service cups-browsed.service bluetooth.service cups.service tlp.service chrony.service plymouth.service rsyslog.service zramswap.service haveged.service sddm.service"
+
+for service in $disabled_services; do
+	echo "Disabling $service"
+	systemctl disable "$service" || true
+	systemctl stop "$service" || true
+done
+
+for service in $enabled_services; do
+	echo "Enabling $service"
+	systemctl enable "$service" || true
+	systemctl start "$service" || true
+done

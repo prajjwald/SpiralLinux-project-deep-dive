@@ -1,0 +1,16 @@
+# v1.0
+# contact: piotr4@gmail.com
+# GPLv3
+
+[Desktop Entry]
+Type=Service
+InitialPreference=3
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/octet-stream;
+Actions=EditInKate
+X-KDE-Priority=TopLevel
+
+[Desktop Action EditInKate]
+Name=Edit in Kate (root)
+Icon=image-red-eye-symbolic
+Exec=if [ "$XDG_SESSION_TYPE" = "wayland" ]; then xhost +si:localuser:root && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dbus-launch kate %U && xhost -si:localuser:root ; else pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true kate %U; fi;

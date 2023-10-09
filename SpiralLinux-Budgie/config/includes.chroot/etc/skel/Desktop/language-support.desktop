@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Language support
+Comment=Configure the locales system for additional language support
+Exec=/usr/sbin/language-support.sh
+Icon=preferences-desktop-locale
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utilities;

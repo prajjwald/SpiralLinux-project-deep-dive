@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Edit as root
+Comment=Edit as root
+Exec=pluma admin://%F
+Icon-Name=emblem-danger
+Selection=s
+Extensions=nodirs;
+Dependencies=pluma;

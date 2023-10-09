@@ -1,0 +1,11 @@
+[Added Associations]
+application/vnd.debian.binary-package=gdebi.desktop;org.kde.ark.desktop;org.kde.discover.desktop;
+application/xml=org.kde.kate.desktop;firefox-esr.desktop;
+
+[Default Applications]
+application/vnd.debian.binary-package=gdebi.desktop;
+application/xml=org.kde.kate.desktop;
+
+[Removed Associations]
+application/vnd.debian.binary-package=plasma-discover-root.desktop;
+application/xml=libreoffice-writer.desktop;okularApplication_txt.desktop;

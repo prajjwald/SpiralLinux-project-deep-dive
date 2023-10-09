@@ -1,0 +1,22 @@
+# APT pinning preferences - https://wiki.debian.org/AptPreferences
+
+##### Kernel / firmware
+
+Package: linux-image-*
+Pin: release a=stable-backports
+Pin-Priority: 600
+
+Package: linux-headers-*
+Pin: release a=stable-backports
+Pin-Priority: 600
+
+Package: firmware-*
+Pin: release a=stable-backports
+Pin-Priority: 600
+
+##### NVIDIA proprietary drivers
+
+Package: nvidia-driver
+Pin: release a=stable-backports
+Pin-Priority: 600
+

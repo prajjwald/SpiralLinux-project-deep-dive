@@ -1,0 +1,30 @@
+@startwbs
+
+* <:palm_tree:> config
+** <:palm_tree:> includes.chroot
+** <:palm_tree:> bootloaders
+*** <:palm_tree:> isolinux
+**** <:four_leaf_clover:> isolinux.cfg
+*** <:palm_tree:> grub-pc
+**** <:palm_tree:> live-theme
+**** <:four_leaf_clover:> grub.cfg
+** <:palm_tree:> packages
+** <:palm_tree:> package-lists
+*** <:four_leaf_clover:> spirallinux-Plasma-packages.list.chroot
+** <:palm_tree:> hooks
+*** <:palm_tree:> normal
+**** <:four_leaf_clover:> 0470-update-dconf-db.hook.chroot
+**** <:four_leaf_clover:> 0900-clear-apt-cache.hook.chroot
+**** <:four_leaf_clover:> 0999-spirallinux.hook.chroot
+**** <:four_leaf_clover:> 0425-update-session-manager-alternative.hook.chroot
+**** <:four_leaf_clover:> 0350-update-default-services-status.hook.chroot
+**** <:four_leaf_clover:> 0450-enable-multiarch.hook.chroot
+**** <:four_leaf_clover:> 0090-remove-unwanted-packages.hook.chroot
+** <:palm_tree:> archives
+*** <:four_leaf_clover:> spirallinux.list.binary
+*** <:four_leaf_clover:> spirallinux.list.chroot
+*** <:four_leaf_clover:> fasttrack.key.chroot
+** <:palm_tree:> preseed
+*** <:four_leaf_clover:> preseed.cfg.chroot
+
+@endwbs

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Discover (root)
+MimeType=application/vnd.debian.binary-package;application/vnd.flatpak;application/vnd.flatpak.repo;application/vnd.flatpak.ref;
+Type=Application
+NoDisplay=false
+Actions=Updates;
+GenericName=Software Center (root)
+Categories=Qt;KDE;System;
+Keywords=program;software;repository;package;install;remove;update;apps;applications;
+Icon=application-vnd.debian.binary-package
+Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true plasma-discover %F

@@ -1,0 +1,39 @@
+--- /usr/share/live/build/functions/configuration.sh.bk	2022-12-09 18:15:15.623888651 -0800
++++ /usr/share/live/build/functions/configuration.sh	2022-12-09 18:20:50.416814951 -0800
+@@ -741,7 +741,7 @@
+ 		Echo_warning "You have specified a value of LB_ISO_VOLUME (--iso-volume) that is too long; the maximum length is 32 characters."
+ 	fi
+ 
+-	if ! In_list "${LB_MEMTEST}" memtest86+ memtest86 none; then
++	if ! In_list "${LB_MEMTEST}" memtest86+ memtest86 memtest86+x32 memtest86+x64 none; then
+ 		Echo_error "You have specified an invalid value for LB_MEMTEST (--memtest)."
+ 		exit 1
+ 	fi
+--- /usr/lib/live/build/config.bk	2022-12-09 18:22:30.001090431 -0800
++++ /usr/lib/live/build/config	2022-12-09 18:23:15.661216741 -0800
+@@ -90,7 +90,7 @@
+ \t    [-k|--linux-flavours FLAVOUR|\"FLAVOURS\"]\n\
+ \t    [--linux-packages PACKAGE|\"PACKAGES\"]\n\
+ \t    [--loadlin true|false]\n\
+-\t    [--memtest memtest86+|memtest86|none]\n\
++\t    [--memtest memtest86+|memtest86|memtest86+x32|memtest86+x64|none]\n\
+ \t    [--mirror-binary URL]\n\
+ \t    [--mirror-binary-security URL]\n\
+ \t    [--mirror-bootstrap URL]\n\
+--- /usr/lib/live/build/binary_memtest.bk	2022-12-09 18:23:35.137270619 -0800
++++ /usr/lib/live/build/binary_memtest	2022-12-09 18:39:40.467932065 -0800
+@@ -64,6 +64,14 @@
+ 	memtest86+)
+ 		Check_package chroot /boot/memtest86+.bin memtest86+
+ 		;;
++
++	memtest86+x32)
++		Check_package chroot /boot/memtest86+x32.bin memtest86+
++		;;
++
++	memtest86+x64)
++		Check_package chroot /boot/memtest86+x64.bin memtest86+
++		;;
+ esac
+ 
+ # Restoring cache

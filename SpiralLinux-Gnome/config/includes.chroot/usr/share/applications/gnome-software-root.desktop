@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Gnome Software (root)
+Comment=Run Gnome Software as root to avoid password prompts
+Categories=System;
+Exec=pkexec gnome-software
+Terminal=false
+Type=Application
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=softwarecenter
+StartupNotify=true
+NoDisplay=false

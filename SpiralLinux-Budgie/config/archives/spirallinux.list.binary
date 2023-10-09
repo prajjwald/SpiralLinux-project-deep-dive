@@ -1,0 +1,13 @@
+# Needed for VirtualBox in Debian Stable
+deb https://fasttrack.debian.net/debian-fasttrack/ bookworm-fasttrack main contrib non-free  #Bookworm Fast Track (for VirtualBox)
+deb https://fasttrack.debian.net/debian-fasttrack/ bookworm-backports-staging main contrib non-free  #Bookworm Fast Track Staging
+
+# Debian Stable
+#deb https://deb.debian.org/debian/ stable main contrib non-free non-free-firmware  #Debian Stable (for upgrades)
+
+# Debian Testing
+#deb https://deb.debian.org/debian/ testing main contrib non-free non-free-firmware  #Debian Testing
+
+# Debian Sid ("Unstable")
+#deb https://deb.debian.org/debian/ sid main contrib non-free non-free-firmware  #Debian Sid ("Unstable")
+

@@ -1,0 +1,29 @@
+@startwbs
+
+* <:palm_tree:> SpiralLinux-project
+** <:palm_tree:> SpiralLinux-Plasma
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-Budgie
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-Builder
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-Cinnamon
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-Gnome
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-LXQt
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-Mate
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+** <:palm_tree:> SpiralLinux-XFCE
+*** <:palm_tree:> config
+*** <:palm_tree:> auto
+
+@endwbs
